@@ -1,3 +1,11 @@
+data/bbc
+tex/*.aux
+tex/*.log
+tex/*.nav
+tex/*.out
+tex/*.snm
+tex/*.toc
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

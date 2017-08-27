@@ -1,0 +1,129 @@
+ \documentclass[fullscreen=true, bookmarks=false]{beamer} % , fleqn
+ \usepackage[utf8]{inputenc}
+ \usepackage[english,russian]{babel}
+ \usepackage{xcolor}
+ \usepackage{amsmath}
+ \usetheme{PaloAlto}
+
+%\usepackage{bm}
+
+\setcounter{tocdepth}{1} % подробность оглавления
+\title{Краткое введение в машинное обучение}
+
+\begin{document}
+
+ \begin{frame}
+ \transdissolve[duration=0.2]
+ \titlepage
+ \end{frame}
+
+\section*{План}
+
+\begin{frame}
+\begin{quote}
+При изучении наук примеры полезнее правил\\
+{\em Исаак Ньютон}
+\end{quote}
+
+\begin{quote}
+Нет царских путей к геометрии\\
+{\em Евклид}
+\end{quote}
+\end{frame}
+
+
+% выводим оглавление
+\begin{frame}
+ \transdissolve[duration=0.2]
+ %\frametitle{Содержание}
+ \tableofcontents[]
+\end{frame}
+
+
+\section{Задача оптимизации}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{}
+ \frametitle{Задача про домики}
+Небольшая компания производит домики для кошек. Фиксированные издержки составляют 20 тыс. руб. в месяц. Переменные издержки составляют 3 тыс. руб. на каждый проданный домик. В первый месяц по цене 6 тыс. руб. за домик было продано 100 домиков. Во второй месяц была установлена цена 8 тыс. руб. за домик, и не было продано ни одного домика. В предположении, что спрос линейно зависит от цены, определите оптимальную цену и объем продаж.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{}
+ \frametitle{Задача про домики}
+ 
+%\begin{figure}[]
+%\includegraphics[]{HolesExperiment1} 
+%\label{fig:HolesExperiment1}
+%\end{figure}
+Пусть $x$ -- количество проданных домиков, $Q$ -- прибыль компании
+\begin{gather*}
+\nonumber
+ c(x) = 20 + 3x\\
+\nonumber
+ x = 50(8-p)\\
+\nonumber
+ p(x) = 8-0.02x\\
+\nonumber
+ Q(x) = p(x)x - c(x)\\
+\nonumber
+ Q(x) \rightarrow max
+\end{gather*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{}
+ \frametitle{Градиентный спуск}
+$L(x)$ -- функция потерь (Loss function) 
+\begin{gather*}
+\nonumber
+L(x) \rightarrow min\\
+\nonumber\\
+\nonumber
+\text{update step:} x = x - \lambda grad(x)\\
+\nonumber\\
+\nonumber
+grad(x) = \frac{L(x+\varepsilon) - L(x - \varepsilon)}{2\varepsilon}
+\end{gather*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{}
+ \frametitle{Минимизация функции двух переменных}
+$L(x_1, x_2)$ -- функция потерь 
+\begin{gather*}
+\nonumber
+L(x_1, x_2) \rightarrow min\\
+\nonumber\\
+\nonumber
+x_1 = x_1 - \lambda grad_1(x_1, x_2)\\
+\nonumber
+x_2 = x_2 - \lambda grad_2(x_1, x_2)\\
+\nonumber\\
+\nonumber
+grad_1(x_1, x_2) = \frac{L(x_1+\varepsilon, x_2) - L(x_1 - \varepsilon, x_2)}{2\varepsilon}\\
+\nonumber
+grad_2(x_1, x_2) = \frac{L(x_1, x_2+\varepsilon) - L(x_1 , x_2 - \varepsilon)}{2\varepsilon}
+\end{gather*}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Задача классификации}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{}
+ \frametitle{Задача классификации}
+
+\end{frame}
+
+
+\end{document}

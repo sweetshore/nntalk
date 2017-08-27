@@ -6,7 +6,7 @@
             "type": "python",
             "request": "launch",
             "stopOnEntry": true,
-            "pythonPath": "/Library/Frameworks/Python.framework/Versions/3.6/bin/python3",
+            //"pythonPath": "/Library/Frameworks/Python.framework/Versions/3.6/bin/python3",
             "program": "${file}",
             "cwd": "${workspaceRoot}",
             "env": {},
