@@ -230,13 +230,13 @@ L(\bm{w}) = \sum_k L_k(\bm{w}) \rightarrow min\\
  $\bm{w}$, $b$ -- коэффициенты линейной функции
 \begin{gather*}
 \nonumber
-l(\bm{x}) = b + \sum_i w_i x_i
+f(\bm{x}) = b + \sum_i w_i x_i
 \end{gather*}
 
 Двумерный случай
 \begin{gather*}
 \nonumber
-l(\bm{x}) = b + \sum_{i=0}^1 w_i x_i= b + w_0 x_0 + w_1 x_1
+f(\bm{x}) = b + \sum_{i=0}^1 w_i x_i= b + w_0 x_0 + w_1 x_1
 \end{gather*}
 
 \end{frame}
@@ -321,18 +321,109 @@ b + \sum_i w_i x_i = 0\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{}
+\frametitle{Нейронные сети и распознавание изображений}
+
+\begin{itemize}
+\item 1936 Ирисы Фишера
+\item 1943 Модель МакКаллока--Питтса
+\item 1958 Нейронная сеть Марка Розенблатта
+\item 1969 Марвин Минский <<Персептроны>>
+\item 1995 Ян Ле Кун -- LeNet и конволюционные нейронные сети (http://yann.lecun.com/exdb/lenet/)
+\item ImageNet -- лучший результат с SVM 26\%
+\item 2012 AlexNet 15\%
+\item 2014 VGG-16 7.5\% 
+\item 2014 GoogLeNet 6.7\% 
+\item 2015 Inception-v3 4.2\%
+\item 2015 ResNet 3.6\%
+\end{itemize}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Что делать дальше?}
+\begin{frame}{}
+\frametitle{Inception-v3}
+\begin{figure}[]
+\includegraphics[scale=0.5]{inception} 
+\end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{}
+\frametitle{Другие крупные области}
+
+Обучение с учителем (Supervised Learning)
+\begin{itemize}
+\item Распознавание звука
+\item Предсказание временных рядов
+\item Обработка естественного языка
+\item Экспертные системы
+\end{itemize}
+
+Обучение без учителя, кластеризация
+\begin{itemize}
+\item LSA
+\item 2008 Collobert and Weston -- Word Embeddings
+\item 2013 Mikolov -- Word2Vec
+\end{itemize}
+
+Обучение с подкреплением (Reinforcement Learning)
+\begin{itemize}
+\item Поведение в реальном мире
+\item 1990-1995 Шашки -- Chinook 
+\item 1995 Нарды -- TD-Gammon 
+\item 1996 Шахматы -- Deep Blue 
+\item 2011 Jeopardy -- Watson
+\item 2015 Го -- AlphaGo
+\end{itemize}
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
-\begin{quote}
-Математика — это язык, на котором написана книга природы.\\
-{\em Галилео Галилей}
-\end{quote}
+\frametitle{Пакеты}
 
+\begin{itemize}
+\item SciKit Learn http://scikit-learn.org/stable/index.html
+\item NLTK
+\item TensorFlow https://www.tensorflow.org/get\_started/get\_started
+\item Keras
+\item Torch http://torch.ch/
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Блоги и статьи}
+\begin{itemize}
+\item https://habrahabr.ru/post/303196/
+\item http://karpathy.github.io/2015/03/30/breaking-convnets/
+\item http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+\item http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/
+\item http://colah.github.io/
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+\frametitle{Лекции и ресурсы онлайн}
+\begin{itemize}
+\item https://www.coursera.org/learn/machine-learning
+\item https://www.kaggle.com/
+\item ШАД и Воронцов -- не стоит)
+\end{itemize}
+
+Что потребуется из матана?
+\begin{itemize}
+\item Производные, градиент, производная сложной функции
+\item Векторные пространства и матрицы -- самое начало
+\item Основы статистики -- вероятность, распределение вероятности для непрерывных переменных
+\end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
