@@ -14,7 +14,7 @@ def logistic_model(feat, coeff):
     coeff -- vector of model coefficients
     """
     val = 0.
-    for n in range(len(feat) - 1):
+    for n in range(len(feat)):
         val += feat[n] * coeff[n]
     val += coeff[-1] # bias term -- last coefficient
     e = np.exp(val)
