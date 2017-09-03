@@ -28,7 +28,7 @@ def vec_norm(vec):
 
 def loss(label, model_fun, feat, coeff):
     """loss function"""
-    return np.abs(float(label) - model_fun(feat, coeff)) + 0.01 * vec_norm(coeff)
+    return np.abs(float(label) - model_fun(feat, coeff)) #+ 0.01 * vec_norm(coeff)
 
 def sgd(loss_fun, model_fun, data, labels, coeff_start, rate, num_epochs):
     """Stochastic gradient descent"""
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     data, labels = read_iris_data()
     #plot_iris_data(data, labels)
 
-    coeff_start = np.array([1., -2., 1.])
+    coeff_start = np.array([1., 1., 1.])
     coeff = sgd(loss, logistic_model, data, labels, coeff_start, 0.1, 10)
     print(coeff)
     plot_iris_data(data, labels, coeff)
