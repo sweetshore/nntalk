@@ -1,2 +1,2 @@
 # nntalk
-Sunday talk materials
+Brief introduction to machine learning
